@@ -1,5 +1,5 @@
 {
-  "name": "appReact",
+  "name": "appreact",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,16 +7,19 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clear": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-*"
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
     "@unform/core": "^2.0.0",
     "@unform/mobile": "^2.0.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-redux": "^7.2.0",
     "react-router-native": "^5.1.2",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

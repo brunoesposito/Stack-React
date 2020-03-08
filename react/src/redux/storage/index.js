@@ -1,18 +1,14 @@
 import { createStore } from 'redux';
-// import Api from '../../global/services/api';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-// const dishes = Api('http://www.mocky.io/v2/5df018d52f0000abc18e0f22', 'get')
-// .then(response => response.json())
-// .then(result => {
-//     return result
-// });
 const dishes = [
     {
         "image": "https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/baked-chilli-jacket-potatoes.jpg",
         "description": "This impressive baked potato is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
     },
     {
-        "image": "https://thumbor.thedailymeal.com/Li6jFZP4s0EjJYTzA4H2lJvhAuM=/870x565/filters:format(webp)/https://www.thedailymeal.com/sites/default/files/slideshows/1952820/2121750/1-cordonbleu-shutterstock.JPG",
+        "image": "https://www.thedailymeal.com/sites/default/files/slideshows/1952820/2121750/1-cordonbleu-shutterstock.JPG",
         "description": "This dish originated in Switzerland, and is a riff on traditional schnitzel. But instead of just frying the pounded veal cutlet, it’s stuffed with ham and an easily meltable cheese (generally Swiss or Gruyère), rolled up into a roulade, and then deep-fried."
     },
     {
@@ -42,6 +38,13 @@ function reducer(state = INITIAL_STATE, action) {
     }
 }
 
-const store = createStore(reducer);
+const persistConfig = {
+    key: 'root',
+    storage
+}
 
-export default store;
+const persistedReducer = persistReducer(persistConfig, reducer);
+const store = createStore(persistedReducer);
+const persistor = persistStore(store);
+
+export { store, persistor };
