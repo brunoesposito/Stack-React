@@ -11,26 +11,26 @@
     "clear": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-*"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.8.1",
-    "@unform/core": "^2.0.0",
-    "@unform/mobile": "^2.0.0",
+    "@react-native-community/async-storage": "1.8.1",
+    "@unform/core": "2.0.0",
+    "@unform/mobile": "2.0.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "react-redux": "^7.2.0",
-    "react-router-native": "^5.1.2",
-    "redux": "^4.0.5",
-    "redux-persist": "^6.0.0"
+    "react-redux": "7.2.0",
+    "react-router-native": "5.1.2",
+    "redux": "4.0.5",
+    "redux-persist": "6.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/runtime": "^7.8.7",
-    "@react-native-community/eslint-config": "^0.0.7",
-    "babel-jest": "^25.1.0",
-    "eslint": "^6.8.0",
-    "jest": "^25.1.0",
-    "metro-react-native-babel-preset": "^0.58.0",
+    "@babel/core": "7.8.7",
+    "@babel/runtime": "7.8.7",
+    "@react-native-community/eslint-config": "0.0.7",
+    "babel-jest": "25.1.0",
+    "eslint": "6.8.0",
+    "jest": "25.1.0",
+    "metro-react-native-babel-preset": "0.58.0",
     "react-test-renderer": "16.9.0",
-    "styled-components": "^5.0.1"
+    "styled-components": "5.0.1"
   },
   "jest": {
     "preset": "react-native"
