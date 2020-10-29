@@ -11,7 +11,7 @@
     "clear": "rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-*"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "1.8.1",
+    "@react-native-community/async-storage": "1.12.1",
     "@unform/core": "2.0.0",
     "@unform/mobile": "2.0.0",
     "react": "16.9.0",
