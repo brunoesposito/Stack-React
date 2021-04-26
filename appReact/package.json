@@ -13,7 +13,7 @@
   "dependencies": {
     "@react-native-community/async-storage": "1.8.1",
     "@unform/core": "2.0.0",
-    "@unform/mobile": "2.0.0",
+    "@unform/mobile": "2.1.6",
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-redux": "7.2.0",
